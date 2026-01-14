@@ -1,8 +1,8 @@
 # Homepage Overview 📋
+![Birthday Countdown](https://raw.githubusercontent.com/Sou1lah/Obsidian-Homepage/main/asset/Screenshot_14-Jan_20-39-32_32049.png)
 
 
 ## 1) Birthday Countdown (DataviewJS)
-![Birthday Countdown](https://raw.githubusercontent.com/Sou1lah/Obsidian-Homepage/main/asset/Screenshot_14-Jan_20-39-32_32049.png)
 
 Code:
 
@@ -112,7 +112,7 @@ div[data-callout="multi-column"].callout > .callout-content > *:is(div,ul,blockq
 ---
 
 ## 3) GitHub
-![[asset/githubHeatmap.png|900x]]
+![GitHub Heatmap](https://raw.githubusercontent.com/Sou1lah/Obsidian-Homepage/main/asset/githubHeatmap.png)
 
 Code:
 
