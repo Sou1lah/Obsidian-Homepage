@@ -1,7 +1,65 @@
 # Homepage Overview 📋
 ![Birthday Countdown](https://raw.githubusercontent.com/Sou1lah/Obsidian-Homepage/main/asset/Screenshot_14-Jan_20-39-32_32049.png)
 
+## background lines CSS-snippet: 
+```css
+/* === Full-width lined paper for both Edit & View Mode === */
+/* === Full-width lined paper for both Edit & View Mode === */
+.bg--lines {
+    position: relative;
+}
 
+/* === Edit Mode (CodeMirror) === */
+.bg--lines .cm-contentContainer > div::before {
+    content: "";
+    position: absolute;
+    top: 0em;
+    left: -50vw; /* extend left */
+    width: 200vw; /* cover left + right */
+    height: 100%;
+    background-image: linear-gradient(to bottom, var(--line-color, #ddd) 1px, transparent 1px);
+    background-size: 100% calc(var(--line-height-normal, 1.6) * 1em);
+    z-index: -1; /* Behind content */
+    pointer-events: none;
+}
+
+.bg--lines .cm-contentContainer > div {
+    position: relative;
+}
+
+.markdown-rendered.bg--lines {
+    position: relative;
+    background-image: linear-gradient(to bottom, var(--line-color, #ddd) 1px, transparent 1px);
+    background-size: 100% calc(var(--line-height-normal, 1.6) * 1em);
+    background-repeat: repeat;
+    background-attachment: local;
+}
+
+/* === Dark mode line color === */
+.theme-dark .bg--lines {
+    --line-color: rgba(255, 255, 255, 0.1);
+}
+
+/* === Light mode line color === */
+.theme-light .bg--lines {
+    --line-color: rgba(0, 0, 0, 0.08);
+}
+
+/* === Disable horizontal scrolling === */
+body,
+.workspace,
+.cm-contentContainer,
+.cm-scroller,
+.markdown-rendered {
+    overflow-x: hidden !important;
+}
+
+.cm-content,
+.markdown-rendered {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+```
 ## Birthday Countdown (DataviewJS)
 
 Code:
@@ -38,7 +96,7 @@ const _birthdayInterval = setInterval(updateCountdown, 1000);
 ```
 
 ## Last Modified Files
-![Last Modified Files](https://raw.githubusercontent.com/Sou1lah/Obsidian-Homepage/main/asset/LastModifiedFiles.png)
+![Last Modified Files](https://raw.githubusercontent.com/Sou1lah/Obsidian-Homepage/main/asset/Last10files.png)
 
 Code:
 
@@ -83,7 +141,7 @@ Weekly Goals (snippet):
 > - [ ] Goal 2
 > - [ ] Goal 3
 
-### Multi Column CSS (excerpt)
+### Multi Column CSS-snippet
 
 ```css
 /* Hide callout icons on top right */
