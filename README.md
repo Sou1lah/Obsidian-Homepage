@@ -1,29 +1,8 @@
 # Homepage Overview 📋
 
-This README documents the main sections of `Homepage.md`. Below each screenshot I added the code used to render that section so you can quickly reference or copy the implementation.
 
----
-
-## 1) Welcome / Banner
-![[Screenshot_14-Jan_20-39-32_32049.png|900x]]
-
-Code:
-
-```markdown
----
-banner: "![[wallhaven-yq5g1k.png]]"
-cssclasses:
-  - bg--lines
----
-<h1 style="font-size: 60px; color: #ff4d4d; text-align: center; font-weight: bold;">
-  Welcome to your Vault
-</h1>
-```
-
----
-
-## 2) Birthday Countdown (DataviewJS)
-![[Screenshot_14-Jan_20-37-37_12233.png|900x]]
+## 1) Birthday Countdown (DataviewJS)
+![[asset/Screenshot_14-Jan_20-39-32_32049.png|900x]]
 
 Code:
 
@@ -36,7 +15,8 @@ container.innerText = 'Loading...';
 
 function updateCountdown() {
   try {
-    const birthDate = new Date(2026, 8, 10);
+    // Birthday date redacted for privacy
+    const birthDate = new Date(/* REDACTED for privacy */);
     const now = new Date();
     const diff = Math.floor((birthDate - now) / 1000);
 
@@ -59,27 +39,18 @@ const _birthdayInterval = setInterval(updateCountdown, 1000);
 
 ---
 
-## 3) Projects & Weekly Goals (multi-column blockquote)
-![[Screenshot_14-Jan_20-37-29_389.png|900x]]
+## 2) Projects & Weekly Goals (multi-column blockquote)
+![[asset/Project_moduls.png|900x]]
 
 Code:
 
 > [!multi-column]
 >
 >> [!warning] Projects
->> - [ ] The Automated Data Warehouse ^6y1z
->> - [ ] The Data Quality Auditor ^irtb
->> - [ ] The Containerized Database
->> - [ ] Write a C compiler
->> - [ ] Chat Room App
->> - [ ] AGame
->> - [ ] Genetic Algorithms
->> - [ ] Quiz Maker
->> - [ ] 8-bit Computer
->> - [ ] OS from Scratch
->> - [ ] Telegram Bot
->> - [ ] Linux Containers
->> - [ ] Search Engine
+>> - [ ] Project A
+>> - [ ] Project B
+>> - [ ] Project C
+>> - [ ] Project D
 >
 >
 >> [!warning] CS Modules
@@ -95,27 +66,71 @@ Code:
 Weekly Goals (snippet):
 
 > [!warning|bgColor=#330000|borderColor=#ff4d4d] Weekly Goals - Week `= date(now).week`
-> - [ ] Spanish lessons
-> - [ ] GYM
-> - [ ] 5x Praying
+> - [ ] Goal 1
+> - [ ] Goal 2
+> - [ ] Goal 3
 
----
+### Multi Column CSS (excerpt)
 
-## 4) GitHub (contribution chart)
-![[Screenshot_14-Jan_20-37-21_11647.png|900x]]
+```css
+/* Hide callout icons on top right */
+.callout-fold,
+.edit-block-button,
+.callout-control,
+.collapse-indicator,
+.callout svg,
+.callout-header svg,
+.callout-header button {
+	display: none !important;
+}
 
-Code:
+/* === Multi Column Callout (MCC) === */
+/* common MCC variables */
+body {
+	--mcc-img-snw-display: none;
+	--callout-min-width: 200px;
+	--callout-nowrap-min-width: 250px;
+	--callout-gap: 1em;
+	--callout-margin: 0px;
+}
+[data-callout="multi-column"].callout {
+	--callout-blend-mode: normal;
+}
 
-```markdown
-## Gihub  
+/* -- Main MCC Code -- */
+div[data-callout="multi-column"].callout > .callout-title { display: none; }
+div[data-callout="multi-column"].callout > .callout-content { display: contents; }
+div[data-callout="multi-column"].callout
+	{ display: flex; flex-wrap: wrap; gap: var(--callout-gap); background: unset; border: unset; margin: unset; padding: unset; clear: both; --columns: unset; }
+div[data-callout="multi-column"].callout .callout:not([data-callout="multi-column"]) { display: flex; flex-direction: column; }
+div[data-callout="multi-column"].callout:not(.is-collapsed) .callout { margin-inline: var(--callout-margin); margin-block: var(--callout-margin); }
+div[data-callout="multi-column"].callout .callout .callout-content { flex-grow: 1}
 
-<img src="https://ghchart.rshah.org/bb2d3b/sou1lah" width="900">
+div[data-callout="multi-column"].callout > .callout-content > *:is(div,ul,blockquote,p) { flex: 1 1 var(--callout-min-width); margin: 0;}
 ```
 
 ---
 
-## 5) Currently (DataviewJS table)
-![[Screenshot_14-Jan_20-37-09_30206.png|900x]]
+## 3) GitHub
+![[asset/githubHeatmap.png|900x]]
+
+Code:
+
+```markdown
+## GitHub  
+
+```markdown
+![GitHub Contributions](https://github.com/{username}/github-readme-stats?tab=repositories)
+
+Or use a GitHub stats card:
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username={username}&show_icons=true&theme=dark)
+```
+
+---
+
+## 4) Currently (DataviewJS table)
+![[asset/Currenlty.png|900x]]
 
 Code (abridged — the real script includes retries and sanitization as in `Homepage.md`):
 
@@ -142,8 +157,8 @@ Code (abridged — the real script includes retries and sanitization as in `Home
 
 ---
 
-## 6) Music Gallery (grid of images)
-![[Screenshot_14-Jan_20-36-10_7715.png|900x]]
+## 5) Music Gallery
+![[asset/Last10files.png|900x]]
 
 Code:
 
@@ -158,8 +173,8 @@ Code:
 
 ---
 
-## 7) Weekly Media (weekly media grid with DataviewJS)
-![[Screenshot_17-Dec_14-45-51_6904.png|900x]]
+## 6) Weekly Media - This Week
+![[asset/moviewacthed this weak.png|900x]]
 
 Code (abridged):
 
@@ -183,8 +198,8 @@ Code (abridged):
 
 ---
 
-## 8) Heatmap (heatmap-tracker block)
-![[Screenshot_11-Sep_10-08-07_32659.png|900x]]
+## 7) Heatmap (heatmap-tracker block)
+![[asset/Screenshot_11-Sep_10-08-07_32659.png|900x]]
 
 Code:
 
@@ -203,6 +218,70 @@ ui:
   hideSubtitle: true
 colorScheme:
   paletteName: default
+```
+
+---
+
+## Background Lines CSS (bg-lines.css)
+
+Use this snippet to get the lined paper background in edit and view modes.
+
+```css
+/* === Full-width lined paper for both Edit & View Mode === */
+.bg--lines {
+    position: relative;
+}
+
+/* === Edit Mode (CodeMirror) === */
+.bg--lines .cm-contentContainer > div::before {
+    content: "";
+    position: absolute;
+    top: 0em;
+    left: -50vw; /* extend left */
+    width: 200vw; /* cover left + right */
+    height: 100%;
+    background-image: linear-gradient(to bottom, var(--line-color, #ddd) 1px, transparent 1px);
+    background-size: 100% calc(var(--line-height-normal, 1.6) * 1em);
+    z-index: -1; /* Behind content */
+    pointer-events: none;
+}
+
+.bg--lines .cm-contentContainer > div {
+    position: relative;
+}
+
+.markdown-rendered.bg--lines {
+    position: relative;
+    background-image: linear-gradient(to bottom, var(--line-color, #ddd) 1px, transparent 1px);
+    background-size: 100% calc(var(--line-height-normal, 1.6) * 1em);
+    background-repeat: repeat;
+    background-attachment: local;
+}
+
+/* === Dark mode line color === */
+.theme-dark .bg--lines {
+    --line-color: rgba(255, 255, 255, 0.1);
+}
+
+/* === Light mode line color === */
+.theme-light .bg--lines {
+    --line-color: rgba(0, 0, 0, 0.08);
+}
+
+/* === Disable horizontal scrolling === */
+body,
+.workspace,
+.cm-contentContainer,
+.cm-scroller,
+.markdown-rendered {
+    overflow-x: hidden !important;
+}
+
+.cm-content,
+.markdown-rendered {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
 ```
 
 ---
