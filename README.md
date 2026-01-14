@@ -2,7 +2,7 @@
 ![Birthday Countdown](https://raw.githubusercontent.com/Sou1lah/Obsidian-Homepage/main/asset/Screenshot_14-Jan_20-39-32_32049.png)
 
 
-## 1) Birthday Countdown (DataviewJS)
+## Birthday Countdown (DataviewJS)
 
 Code:
 
@@ -36,6 +36,19 @@ function updateCountdown() {
 updateCountdown();
 const _birthdayInterval = setInterval(updateCountdown, 1000);
 ```
+
+## Last Modified Files
+![Last Modified Files](https://raw.githubusercontent.com/Sou1lah/Obsidian-Homepage/main/asset/LastModifiedFiles.png)
+
+Code:
+
+```dataview
+TABLE file.mtime AS "Last Modified"
+FROM ""
+SORT file.mtime DESC
+LIMIT 10
+```
+
 
 ---
 
@@ -158,7 +171,7 @@ Code (abridged — the real script includes retries and sanitization as in `Home
 ---
 
 ## 5) Music Gallery
-![Music Gallery](https://raw.githubusercontent.com/Sou1lah/Obsidian-Homepage/main/asset/Last10files.png)
+yeah its just html div 😂😂 will add functionality to it later tho
 
 Code:
 
@@ -198,29 +211,7 @@ Code (abridged):
 
 ---
 
-## 7) Heatmap (heatmap-tracker block)
-![Heatmap](https://raw.githubusercontent.com/Sou1lah/Obsidian-Homepage/main/asset/Screenshot_11-Sep_10-08-07_32659.png)
 
-Code:
-
-```heatmap-tracker
-heatmapTitle: Praying
-heatmapSubtitle: ""
-property: prayer
-year: 2026
-separateMonths: true
-showCurrentDayBorder: true
-disableFileCreation: true
-path: Journaling/2026
-ui:
-  hideTabs: true
-  hideYear: true
-  hideSubtitle: true
-colorScheme:
-  paletteName: default
-```
-
----
 
 ## Background Lines CSS (bg-lines.css)
 
@@ -285,5 +276,3 @@ body,
 ```
 
 ---
-
-If you want any edits — different screenshot order, different sections, or full unabridged code blocks (I shortened longer scripts above for readability) — tell me which sections you want expanded and I will update the README. ✅
