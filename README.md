@@ -2,7 +2,7 @@
 
 
 ## 1) Birthday Countdown (DataviewJS)
-![[asset/Screenshot_14-Jan_20-39-32_32049.png|900x]]
+![Birthday Countdown](https://raw.githubusercontent.com/Sou1lah/Obsidian-Homepage/main/asset/Screenshot_14-Jan_20-39-32_32049.png)
 
 Code:
 
@@ -40,7 +40,7 @@ const _birthdayInterval = setInterval(updateCountdown, 1000);
 ---
 
 ## 2) Projects & Weekly Goals (multi-column blockquote)
-![[asset/Project_moduls.png|900x]]
+![Projects & Weekly Goals](https://raw.githubusercontent.com/Sou1lah/Obsidian-Homepage/main/asset/Project_moduls.png)
 
 Code:
 
@@ -130,7 +130,7 @@ Or use a GitHub stats card:
 ---
 
 ## 4) Currently (DataviewJS table)
-![[asset/Currenlty.png|900x]]
+![Currently](https://raw.githubusercontent.com/Sou1lah/Obsidian-Homepage/main/asset/Currenlty.png)
 
 Code (abridged — the real script includes retries and sanitization as in `Homepage.md`):
 
@@ -158,7 +158,7 @@ Code (abridged — the real script includes retries and sanitization as in `Home
 ---
 
 ## 5) Music Gallery
-![[asset/Last10files.png|900x]]
+![Music Gallery](https://raw.githubusercontent.com/Sou1lah/Obsidian-Homepage/main/asset/Last10files.png)
 
 Code:
 
@@ -174,7 +174,7 @@ Code:
 ---
 
 ## 6) Weekly Media - This Week
-![[asset/moviewacthed this weak.png|900x]]
+![Weekly Media](https://raw.githubusercontent.com/Sou1lah/Obsidian-Homepage/main/asset/moviewacthed%20this%20weak.png)
 
 Code (abridged):
 
@@ -199,7 +199,7 @@ Code (abridged):
 ---
 
 ## 7) Heatmap (heatmap-tracker block)
-![[asset/Screenshot_11-Sep_10-08-07_32659.png|900x]]
+![Heatmap](https://raw.githubusercontent.com/Sou1lah/Obsidian-Homepage/main/asset/Screenshot_11-Sep_10-08-07_32659.png)
 
 Code:
 
