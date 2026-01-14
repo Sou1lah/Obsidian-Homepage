@@ -1,5 +1,7 @@
-# Homepage Overview 📋
+# Homepage Overview 
 ![Birthday Countdown](https://raw.githubusercontent.com/Sou1lah/Obsidian-Homepage/main/asset/Screenshot_14-Jan_20-39-32_32049.png)
+
+removed the satanic banner after so many ppl commented on it 0_o
 
 ## background lines CSS-snippet: 
 ```css
