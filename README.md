@@ -1,7 +1,19 @@
 # Homepage Overview 
 ![Birthday Countdown](https://raw.githubusercontent.com/Sou1lah/Obsidian-Homepage/main/asset/Screenshot_14-Jan_20-39-32_32049.png)
 
-removed the satanic banner after so many ppl commented on it 0_o
+```html
+<div style="display: flex; align-items: center; gap: 20px; margin: 20px 0;">
+  <div style="flex: 1;">
+    <p style="font-size: 16px; line-height: 1.6;">
+      Removed the satanic banner after so many ppl commented on it 0_o<br>
+      Instead we have <strong>CHOSOOOO</strong>
+    </p>
+  </div>
+  <div style="flex: 1; text-align: center;">
+    <img src="https://i.pinimg.com/originals/73/76/dd/7376dda2e4ac4d6a504241fec37e95f7.gif" style="max-width: 100%; height: auto;">
+  </div>
+</div>
+```
 
 ## background lines CSS-snippet: 
 ```css
